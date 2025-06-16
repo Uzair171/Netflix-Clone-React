@@ -1,0 +1,82 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px  6%;
+    position: fixed;
+    font-size: 14px;
+    color: #e5e5e5;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.7));
+    z-index: 1;
+
+}
+
+.left-navbar{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.main-logo{
+    width: 90px;
+
+}
+
+.left-navbar > ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+.left-navbar > ul > li{
+    cursor: pointer;
+}
+
+.right-navbar{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.right-navbar > .serach-icon{
+    width: 20px;
+    cursor: pointer;
+}
+
+.right-navbar >div> .profile{
+    border-radius: 5px;
+    width: 35px;
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.dropdown{
+    position: absolute;
+    top: 100%;
+    background-color: #191919;
+    padding: 18px 22px;
+    right: 0;
+    text-decoration: underline;
+    z-index: 1;
+    display: none;
+    width: max-content;
+    
+}
+
+.navbar :hover .dropdown{
+    display: block;
+}
+
+.dropdown p{
+    cursor: pointer;
+    font-size: 15px;
+}
