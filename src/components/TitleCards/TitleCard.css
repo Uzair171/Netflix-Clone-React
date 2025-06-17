@@ -33,6 +33,10 @@
     cursor: pointer;
     transition: transform ease-out 0.3s ;
 }
+.card >img{
+    width: 240px;
+    max-height: 240px;
+}
 
 .card > p{
     position: absolute;
