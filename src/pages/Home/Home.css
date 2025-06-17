@@ -1,11 +1,19 @@
+
 .hero{
     position: relative;
 }
 
 .banner-img{
     width: 100%;
-    mask-image: linear-gradient(to right,transparent, black 75%);
-    -weblit-mask-image: linear-gradient(to right,transparent, black 75%);
+    -webkit-mask-image: 
+        linear-gradient(to right, transparent, black 75%);
+        /* linear-gradient(to top, transparent, black 75%); */
+    mask-image: 
+        linear-gradient(to right, transparent, black 100%);
+        /* linear-gradient(to top, transparent, black 100%); */
+    
+
+     
     height: 100vh;
 }
 
@@ -64,4 +72,8 @@
 
 .dark-btn{
     background: #6d6d6e66 ;
+}
+
+.more-cards{
+    padding-left: 6%;
 }

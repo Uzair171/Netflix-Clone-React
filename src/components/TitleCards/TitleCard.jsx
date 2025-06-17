@@ -1,4 +1,4 @@
-import React from 'react'
+import {useRef,useEffect} from 'react'
 import cards from '../../assets/cards/Cards_data.js'
 import './TitleCard.css'
 
@@ -10,11 +10,30 @@ import './TitleCard.css'
   </div>
 ));
 
-const TitleCard = () => {
+
+
+const TitleCard = (props) => {
+  
+   const cardsRef = useRef();
+
+  const handleWheel = (event) => {
+    event.preventDefault(); 
+    if (cardsRef.current) {
+      cardsRef.current.scrollLeft += event.deltaY;
+    }
+  };
+
+  useEffect(() => {
+    const el = cardsRef.current;
+    if (el) {
+      el.addEventListener('wheel', handleWheel, { passive: false }); 
+    }
+
+  }, [])
   return (
     <div className='title-Cards'>
-      <h2>Popular on Netflix</h2>
-      <div className="card-list">
+      <h2>{props.title ? props.title : "Popular on Netflix"}</h2>
+      <div className="card-list" ref={cardsRef}>
         {renderedCards}
       </div>
     </div>
