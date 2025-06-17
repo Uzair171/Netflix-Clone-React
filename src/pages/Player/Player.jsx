@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Player.css'
 import back_arrow_img from '../../assets/back_arrow_icon.png'
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 const options = {
   method: 'GET',
@@ -15,6 +15,7 @@ const options = {
 const Player = () => {
 
   const {id} = useParams();
+  const navigate =useNavigate();
 
   const [apiData, setApiData] = useState({
     key:'',
@@ -33,7 +34,7 @@ const Player = () => {
 
   return (
     <div className='player'>
-      <Link to='/'><img className='img' src={back_arrow_img} alt="Back Arrow Image" /></Link>
+      <img className='img' src={back_arrow_img} alt="Back Arrow Image" onClick={()=>navigate(-2)} />
       <iframe src={`https://www.youtube.com/embed/${apiData.key}`}
        frameborder="0" width='90%' height='90%' title='trailor' allowFullScreen ></iframe>
         <div className='player-info'>

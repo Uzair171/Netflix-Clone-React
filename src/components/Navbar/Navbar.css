@@ -6,7 +6,7 @@
     position: fixed;
     font-size: 14px;
     color: #e5e5e5;
-    background-image: linear-gradient(180deg,rgba(0,0,0,0.7));
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.4));
     z-index: 1;
 
 }
@@ -80,4 +80,8 @@
 .dropdown p{
     cursor: pointer;
     font-size: 15px;
+}
+
+.nav-dark{
+    background: #191919;
 }
