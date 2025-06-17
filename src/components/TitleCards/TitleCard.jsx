@@ -1,6 +1,7 @@
 import {useRef,useEffect, useState} from 'react'
 import cards from '../../assets/cards/Cards_data.js'
 import './TitleCard.css'
+import { Link } from 'react-router-dom';
 const options = {
   method: 'GET',
   headers: {
@@ -18,10 +19,10 @@ const TitleCard = (props) => {
 
   
   const renderedCards = apiData.map((card, index) => (
-    <div className="card" key={index}>
+    <Link to={`/player/${card.id}`} className="card" key={index}>
       <img src={`https://image.tmdb.org/t/p/w500`+card.poster_path} alt="Movie card" />
       <p>{card.original_title}</p>
-    </div>
+    </Link>
   ));
   
    
