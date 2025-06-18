@@ -30,7 +30,7 @@ const Player = () => {
 
   return (
     <div className='player'>
-      <img className='img' src={back_arrow_img} alt="Back Arrow Image" onClick={()=>navigate(-2)} />
+      <img className='img' src={back_arrow_img} alt="Back Arrow Image" onClick={()=>navigate('/')} />
       <iframe src={`https://www.youtube.com/embed/${apiData.key}`}
        frameborder="0" width='90%' height='90%' title='trailor' allowFullScreen ></iframe>
         <div className='player-info'>

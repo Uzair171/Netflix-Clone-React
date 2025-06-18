@@ -1,5 +1,5 @@
 .login{
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-Gradient(#0000007e,#0000007e),url(/background_banner.jpg);
     width: 100%;
     padding: 20px 8%;
