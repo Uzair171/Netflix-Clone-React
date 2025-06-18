@@ -1,7 +1,7 @@
 import './Home.css';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import hero_title from '../../assets/hero_title.png';
-import play_icon from '../../assets/Play_icon.png';
+import play_icon from '../../assets/play_icon.png';
 import info_icon from '../../assets/info_icon.png';
 import TitleCard from '../../components/TitleCards/TitleCard.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
