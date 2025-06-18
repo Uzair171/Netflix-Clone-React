@@ -24,12 +24,6 @@ const Login = () => {
     }
     setLoading(false)
   }
-
-  
-
-
-
-
   return (
   loading ? <div className='spinner'>
       <img src={netflix_spinner} alt="" />
