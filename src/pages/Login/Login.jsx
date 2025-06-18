@@ -3,6 +3,7 @@ import  './Login.css'
 import logo from '../../assets/logo.png'
 import {signIn,signUp} from '../../firebase.js'
 
+
 const Login = () => {
   const [signState,setSignState] = useState("Sign In")
   const [name,setName] = useState("")
@@ -14,8 +15,10 @@ const Login = () => {
     e.preventDefault();
     if(signState === "Sign In"){
       await signIn(email,password)
+      
     }else{
       await signUp(name,email,password)
+      
     }
   }
 
