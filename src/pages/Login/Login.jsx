@@ -24,6 +24,20 @@ const Login = () => {
     }
     setLoading(false)
   }
+
+  function signInHandle(){
+    setSignState("Sign Up")
+    setName("")
+    setEmail("")
+    setPassword("")
+  }
+
+  function signUpHandle(){
+    setSignState("Sign In")
+    setName("")
+    setEmail("")
+    setPassword("")
+  }
   return (
   loading ? <div className='spinner'>
       <img src={netflix_spinner} alt="" />
@@ -46,8 +60,8 @@ const Login = () => {
           </div>
         </form>
         <div className="form-switch">
-          {signState==="Sign In"? <p>New to Netflix? <span onClick={()=>(setSignState("Sign Up"))}>Sign Up Now</span></p>:
-          <p>Already have account? <span onClick={()=>(setSignState("Sign In"))}>Sign In Now</span></p>}
+          {signState==="Sign In"? <p>New to Netflix? <span onClick={signInHandle}>Sign Up Now</span></p>:
+          <p>Already have account? <span onClick={signUpHandle}>Sign In Now</span></p>}
           
         </div>
       </div>
