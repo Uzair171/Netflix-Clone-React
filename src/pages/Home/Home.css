@@ -12,8 +12,7 @@
         linear-gradient(to right, transparent, black 100%);
         /* linear-gradient(to top, transparent, black 100%); */
     
-
-    
+    min-height: 80vh;
 }
 
 .hero_caption{
