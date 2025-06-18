@@ -1,52 +1,48 @@
-.navbar{
+.navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px  6%;
+    padding: 20px 6%;
     position: fixed;
     font-size: 14px;
     color: #e5e5e5;
-    background-image: linear-gradient(180deg,rgba(0,0,0,0.4));
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.4));
     z-index: 1;
-
 }
 
-.left-navbar{
+.left-navbar {
     display: flex;
     align-items: center;
     gap: 50px;
-
 }
 
-.main-logo{
+.main-logo {
     width: 90px;
-
 }
 
-.left-navbar > ul{
+.left-navbar > ul {
     display: flex;
     list-style: none;
     gap: 20px;
-
 }
 
-.left-navbar > ul > li{
+.left-navbar > ul > li {
     cursor: pointer;
 }
 
-.right-navbar{
+.right-navbar {
     display: flex;
     gap: 20px;
     align-items: center;
     position: relative;
 }
 
-.right-navbar > .serach-icon{
+.right-navbar > .search-icon {
     width: 20px;
     cursor: pointer;
 }
 
-.right-navbar >div> .profile{
+.right-navbar > div > .profile {
     border-radius: 5px;
     width: 35px;
 }
@@ -58,8 +54,17 @@
     cursor: pointer;
 }
 
+/* ✅ NEW WRAPPER for hover targeting */
+.profile-wrapper {
+    position: relative;
+}
 
-.dropdown{
+/* ✅ Show dropdown only when hovering the wrapper */
+.profile-wrapper:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
     position: absolute;
     top: 100%;
     background-color: #191919;
@@ -70,39 +75,38 @@
     display: none;
     width: max-content;
     border-radius: 2px;
-    
 }
 
-.navbar :hover .dropdown{
-    display: block;
-}
-
-.dropdown p{
+.dropdown p {
     cursor: pointer;
     font-size: 15px;
 }
 
-.nav-dark{
+.nav-dark {
     background: #191919;
 }
 
-@media (max-width:1024px) {
-    .navbar{
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
         padding: 20px 4%;
     }
-    .left-navbar > ul{
+
+    .left-navbar > ul {
         display: none;
     }
-    .navbar > img{
+
+    .navbar > img {
         height: 25px;
     }
 }
 
-@media (max-width:500px) {
-    .navbar img{
+@media (max-width: 500px) {
+    .navbar img {
         height: 30px;
     }
-    .right-navbar{
+
+    .right-navbar {
         gap: 10px;
     }
 }
