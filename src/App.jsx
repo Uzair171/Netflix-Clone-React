@@ -25,8 +25,8 @@ export default function App(){
     <>
       <ToastContainer theme="dark"/>
       <Routes>
-        <Route path="/" element={ <Home/>}/>
         <Route path="/login" element={ <Login/>}/>
+        <Route path="/" element={ <Home/>}/>
         <Route path="/player/:id" element={ <Player/>}/>
      
       </Routes>
